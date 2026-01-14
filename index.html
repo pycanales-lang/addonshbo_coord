@@ -32,7 +32,7 @@ body{
     box-shadow:0 25px 50px -12px rgba(0,0,0,.45);
 }
 
-/* HEADER CAMPAÑA */
+/* HEADER */
 .header{
     text-align:center;
     padding:16px 12px;
@@ -106,7 +106,7 @@ body{
     text-transform:uppercase;
 }
 
-/* CARD INCENTIVO */
+/* CARD */
 .card{
     background:linear-gradient(135deg,#f1f5f9,#ffffff);
     border-radius:20px;
@@ -119,19 +119,41 @@ body{
     color:#0f172a;
     margin-bottom:12px;
 }
-.card p{
-    font-size:13px;
-    margin:8px 0;
-    color:#334155;
-    display:flex;
-    gap:6px;
+
+/* INCENTIVO MEJORADO */
+.incentive-list{
+    display:grid;
+    gap:10px;
 }
-.highlight{
+.incentive-item{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:14px;
+    padding:10px 12px;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:13px;
+    color:#334155;
+}
+.incentive-icon{
+    font-size:18px;
+}
+.incentive-strong{
     font-weight:900;
-    color:var(--primary);
+    color:#1e3a8a;
+}
+.incentive-highlight{
+    background:#ecfeff;
+    border:1px solid #67e8f9;
+    color:#0e7490;
+    font-weight:900;
+    padding:2px 6px;
+    border-radius:8px;
+    display:inline-block;
 }
 
-/* BOTÓN CTA */
+/* BOTÓN */
 .btn{
     display:block;
     margin:22px auto 0;
@@ -149,30 +171,7 @@ body{
     transform:scale(.98);
 }
 
-/* BASES */
-.bases{
-    background:#fffbeb;
-    border:1px solid #fde68a;
-    border-radius:18px;
-    padding:16px;
-    margin-top:22px;
-}
-.bases h3{
-    font-size:14px;
-    margin-bottom:8px;
-    color:#92400e;
-}
-.bases ul{
-    padding-left:18px;
-    font-size:12px;
-    color:#78350f;
-}
-.anr{
-    color:#b91c1c;
-    font-weight:900;
-}
-
-/* OBJETIVO (TABLA) */
+/* OBJETIVO */
 .objective{
     background:#ffffff;
     border:1px solid #e2e8f0;
@@ -212,10 +211,32 @@ body{
 .objective tfoot td{
     font-weight:900;
     border-top:2px solid #1e3a8a;
-    color:#0f172a;
 }
 
-/* IMAGEN PREMIO */
+/* BASES */
+.bases{
+    background:#fffbeb;
+    border:1px solid #fde68a;
+    border-radius:18px;
+    padding:16px;
+    margin-top:22px;
+}
+.bases h3{
+    font-size:14px;
+    margin-bottom:8px;
+    color:#92400e;
+}
+.bases ul{
+    padding-left:18px;
+    font-size:12px;
+    color:#78350f;
+}
+.anr{
+    color:#b91c1c;
+    font-weight:900;
+}
+
+/* IMAGEN */
 .prize-img{
     margin-top:25px;
     text-align:center;
@@ -260,9 +281,27 @@ body{
     <!-- INCENTIVO -->
     <div class="card">
         <h2>🎯 Incentivo vigente – Enero</h2>
-        <p>📍 Zonas: <span class="highlight">Central y Asunción</span></p>
-        <p>🎟️ Modalidad: <span class="highlight">sujeto a cumplimiento por zona</span></p>
-        <p>🏆 Premio: <b>10% adicional en la métrica</b> del Coordinador del asesor ganador</p>
+
+        <div class="incentive-list">
+            <div class="incentive-item">
+                <div class="incentive-icon">📍</div>
+                <div><span class="incentive-strong">Zonas:</span> Central y Asunción</div>
+            </div>
+
+            <div class="incentive-item">
+                <div class="incentive-icon">🎟️</div>
+                <div><span class="incentive-strong">Modalidad:</span> sujeto a cumplimiento por zona</div>
+            </div>
+
+            <div class="incentive-item">
+                <div class="incentive-icon">🏆</div>
+                <div>
+                    <span class="incentive-strong">Beneficio:</span><br>
+                    <span class="incentive-highlight">+10% adicional</span>
+                    en la métrica del Coordinador del asesor ganador
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- BOTÓN -->
@@ -270,16 +309,12 @@ body{
         📲 Ver paso a paso de activación HBO
     </a>
 
-        <!-- OBJETIVO -->
+    <!-- OBJETIVO -->
     <div class="objective">
         <h3>📌 Bases y Condiciones – Objetivo</h3>
         <table>
             <thead>
-                <tr>
-                    <th>Región</th>
-                    <th>Zona</th>
-                    <th>Qty HBO</th>
-                </tr>
+                <tr><th>Región</th><th>Zona</th><th>Qty HBO</th></tr>
             </thead>
             <tbody>
                 <tr><td>Asunción</td><td>Asunción - 1</td><td>180</td></tr>
@@ -289,14 +324,11 @@ body{
                 <tr><td>Central</td><td>Central + Ñeembucú</td><td>175</td></tr>
             </tbody>
             <tfoot>
-                <tr>
-                    <td colspan="2">Total</td>
-                    <td>678</td>
-                </tr>
+                <tr><td colspan="2">Total</td><td>678</td></tr>
             </tfoot>
         </table>
     </div>
-    
+
     <!-- BASES -->
     <div class="bases">
         <h3>📜 Mecánica del sorteo</h3>
@@ -353,7 +385,6 @@ function updateTimer(){
             Math.floor((remaining%(1000*60*60))/(1000*60)).toString().padStart(2,"0");
     }
 }
-
 updateTimer();
 setInterval(updateTimer,60000);
 </script>
