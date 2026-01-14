@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Incentivo HBO | Coordinadores</title>
+<title>Incentivo HBO | Enero</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -24,7 +24,7 @@ body{
     min-height:100vh;
 }
 .container{
-    max-width:520px;
+    max-width:480px;
     width:100%;
     background:#fff;
     border-radius:26px;
@@ -32,7 +32,7 @@ body{
     box-shadow:0 25px 50px -12px rgba(0,0,0,.45);
 }
 
-/* HEADER */
+/* HEADER CAMPAÑA */
 .header{
     text-align:center;
     padding:16px 12px;
@@ -106,7 +106,7 @@ body{
     text-transform:uppercase;
 }
 
-/* CARD */
+/* CARD INCENTIVO */
 .card{
     background:linear-gradient(135deg,#f1f5f9,#ffffff);
     border-radius:20px;
@@ -123,25 +123,68 @@ body{
     font-size:13px;
     margin:8px 0;
     color:#334155;
+    display:flex;
+    gap:6px;
 }
 .highlight{
     font-weight:900;
     color:var(--primary);
 }
 
-/* TABLA OBJETIVO */
-.objective{
-    margin-top:22px;
-    background:#ffffff;
-    border-radius:20px;
+/* BOTÓN CTA */
+.btn{
+    display:block;
+    margin:22px auto 0;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    border-radius:16px;
+    text-decoration:none;
+    font-weight:900;
+    font-size:15px;
+    box-shadow:0 10px 20px rgba(37,99,235,.35);
+}
+.btn:active{
+    transform:scale(.98);
+}
+
+/* BASES */
+.bases{
+    background:#fffbeb;
+    border:1px solid #fde68a;
+    border-radius:18px;
     padding:16px;
+    margin-top:22px;
+}
+.bases h3{
+    font-size:14px;
+    margin-bottom:8px;
+    color:#92400e;
+}
+.bases ul{
+    padding-left:18px;
+    font-size:12px;
+    color:#78350f;
+}
+.anr{
+    color:#b91c1c;
+    font-weight:900;
+}
+
+/* OBJETIVO (TABLA) */
+.objective{
+    background:#ffffff;
     border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:16px;
+    margin-top:22px;
 }
 .objective h3{
     font-size:15px;
     font-weight:900;
     color:#0f172a;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 .objective table{
     width:100%;
@@ -168,8 +211,19 @@ body{
 }
 .objective tfoot td{
     font-weight:900;
-    color:#0f172a;
     border-top:2px solid #1e3a8a;
+    color:#0f172a;
+}
+
+/* IMAGEN PREMIO */
+.prize-img{
+    margin-top:25px;
+    text-align:center;
+}
+.prize-img img{
+    max-width:100%;
+    border-radius:18px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
 
 /* FOOTER */
@@ -186,7 +240,7 @@ body{
 <div class="container">
 
     <div class="header">
-        <span class="tag">👥 Vista Coordinadores</span>
+        <span class="tag">🔥 Incentivo activo</span>
         <h1>Activaciones HBO</h1>
     </div>
 
@@ -205,15 +259,37 @@ body{
 
     <!-- INCENTIVO -->
     <div class="card">
-        <h2>🎯 Objetivo de campaña</h2>
+        <h2>🎯 Incentivo vigente – Enero</h2>
         <p>📍 Zonas: <span class="highlight">Central y Asunción</span></p>
-        <p>📊 Modalidad: seguimiento por región y zona</p>
+        <p>🎟️ Modalidad: <span class="highlight">Sorteo por cupones</span></p>
+        <p>🏆 Premio: <b>Smartphone USD 450</b> por zona</p>
     </div>
 
-    <!-- OBJETIVO TABLA -->
+    <!-- BOTÓN -->
+    <a href="paso-a-paso.html" class="btn">
+        📲 Ver paso a paso de activación HBO
+    </a>
+
+    <!-- BASES -->
+    <div class="bases">
+        <h3>📜 Mecánica del sorteo</h3>
+        <ul>
+            <li><b>Método de participación:</b> 1 cupón por activación válida</li>
+            <li><b>Mínimo para concursar:</b> 2 activaciones</li>
+            <li><b>Días tácticos:</b> duplicación de cupones</li>
+            <li><b>Sorteo:</b> al cierre del período (2 al 31 de enero)</li>
+        </ul>
+
+        <h3>⚠️ Condiciones</h3>
+        <ul>
+            <li>Bajas o cancelaciones dentro de 60 días serán <span class="anr">ANR</span></li>
+            <li>Sujeto a cumplimiento de la zona</li>
+        </ul>
+    </div>
+
+    <!-- OBJETIVO -->
     <div class="objective">
         <h3>📌 Bases y Condiciones – Objetivo</h3>
-
         <table>
             <thead>
                 <tr>
@@ -223,31 +299,11 @@ body{
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Asunción</td>
-                    <td>Asunción - 1</td>
-                    <td>180</td>
-                </tr>
-                <tr>
-                    <td>Asunción</td>
-                    <td>Asunción - 2</td>
-                    <td>67</td>
-                </tr>
-                <tr>
-                    <td>Central</td>
-                    <td>Central + Cordillera</td>
-                    <td>142</td>
-                </tr>
-                <tr>
-                    <td>Central</td>
-                    <td>Central + Paraguarí</td>
-                    <td>115</td>
-                </tr>
-                <tr>
-                    <td>Central</td>
-                    <td>Central + Ñeembucú</td>
-                    <td>175</td>
-                </tr>
+                <tr><td>Asunción</td><td>Asunción - 1</td><td>180</td></tr>
+                <tr><td>Asunción</td><td>Asunción - 2</td><td>67</td></tr>
+                <tr><td>Central</td><td>Central + Cordillera</td><td>142</td></tr>
+                <tr><td>Central</td><td>Central + Paraguarí</td><td>115</td></tr>
+                <tr><td>Central</td><td>Central + Ñeembucú</td><td>175</td></tr>
             </tbody>
             <tfoot>
                 <tr>
@@ -258,7 +314,12 @@ body{
         </table>
     </div>
 
-    <div class="footer">© 2026 – Uso interno | Coordinadores</div>
+    <!-- IMAGEN -->
+    <div class="prize-img">
+        <img src="./celular-asesor.jpg" alt="Premio Smartphone">
+    </div>
+
+    <div class="footer">© 2026 – Uso interno</div>
 </div>
 
 <script>
@@ -284,13 +345,12 @@ function updateTimer(){
 
         bar.style.backgroundColor = color;
 
-        const d = Math.floor(remaining / (1000*60*60*24));
-        const h = Math.floor((remaining % (1000*60*60*24)) / (1000*60*60));
-        const m = Math.floor((remaining % (1000*60*60)) / (1000*60));
-
-        document.getElementById("d").textContent = d.toString().padStart(2,"0");
-        document.getElementById("h").textContent = h.toString().padStart(2,"0");
-        document.getElementById("m").textContent = m.toString().padStart(2,"0");
+        document.getElementById("d").textContent =
+            Math.floor(remaining/(1000*60*60*24)).toString().padStart(2,"0");
+        document.getElementById("h").textContent =
+            Math.floor((remaining%(1000*60*60*24))/(1000*60*60)).toString().padStart(2,"0");
+        document.getElementById("m").textContent =
+            Math.floor((remaining%(1000*60*60))/(1000*60)).toString().padStart(2,"0");
     }
 }
 
