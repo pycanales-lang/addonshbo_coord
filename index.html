@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Incentivo HBO | Enero</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+    --primary:#1e3a8a;
+    --secondary:#2563eb;
+    --accent:#22c55e;
+    --danger:#ef4444;
+    --success:#059669;
+    --bg:#0f172a;
+}
+body{
+    font-family:'Segoe UI',system-ui,sans-serif;
+    background:linear-gradient(135deg,var(--bg),#1e293b);
+    margin:0;
+    padding:10px;
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+}
+.container{
+    max-width:480px;
+    width:100%;
+    background:#fff;
+    border-radius:26px;
+    padding:20px;
+    box-shadow:0 25px 50px -12px rgba(0,0,0,.45);
+}
+
+/* HEADER CAMPAÑA */
+.header{
+    text-align:center;
+    padding:16px 12px;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    border-radius:18px;
+    margin-bottom:15px;
+}
+.tag{
+    background:var(--accent);
+    color:#052e16;
+    font-size:11px;
+    font-weight:900;
+    padding:4px 14px;
+    border-radius:999px;
+    display:inline-block;
+}
+.header h1{
+    margin:10px 0 0;
+    color:#fff;
+    font-size:26px;
+    font-weight:900;
+}
+
+/* TIMER */
+.timer{
+    background:#f8fafc;
+    border-radius:16px;
+    padding:14px;
+    margin:15px 0;
+    border:1px solid #e2e8f0;
+    text-align:center;
+}
+.timer-title{
+    font-size:11px;
+    font-weight:800;
+    color:#ef4444;
+    margin-bottom:6px;
+}
+.progress{
+    background:#e2e8f0;
+    border-radius:10px;
+    height:14px;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+.progress-bar{
+    height:100%;
+    width:0%;
+    transition: width 1s ease, background-color 1s ease;
+    animation:pulse 1.2s infinite;
+}
+@keyframes pulse{
+    0%{opacity:1}
+    50%{opacity:.7}
+    100%{opacity:1}
+}
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+.count{
+    font-size:20px;
+    font-weight:900;
+    color:var(--primary);
+}
+.count span{
+    display:block;
+    font-size:9px;
+    color:#94a3b8;
+    text-transform:uppercase;
+}
+
+/* CARD INCENTIVO */
+.card{
+    background:linear-gradient(135deg,#f1f5f9,#ffffff);
+    border-radius:20px;
+    padding:18px;
+    margin-top:15px;
+    border:1px solid #e2e8f0;
+}
+.card h2{
+    font-size:16px;
+    color:#0f172a;
+    margin-bottom:12px;
+}
+.card p{
+    font-size:13px;
+    margin:8px 0;
+    color:#334155;
+    display:flex;
+    gap:6px;
+}
+.highlight{
+    font-weight:900;
+    color:var(--primary);
+}
+
+/* BOTÓN CTA */
+.btn{
+    display:block;
+    margin:22px auto 0;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    border-radius:16px;
+    text-decoration:none;
+    font-weight:900;
+    font-size:15px;
+    box-shadow:0 10px 20px rgba(37,99,235,.35);
+}
+.btn:active{
+    transform:scale(.98);
+}
+
+/* BASES */
+.bases{
+    background:#fffbeb;
+    border:1px solid #fde68a;
+    border-radius:18px;
+    padding:16px;
+    margin-top:22px;
+}
+.bases h3{
+    font-size:14px;
+    margin-bottom:8px;
+    color:#92400e;
+}
+.bases ul{
+    padding-left:18px;
+    font-size:12px;
+    color:#78350f;
+}
+.anr{
+    color:#b91c1c;
+    font-weight:900;
+}
+
+/* IMAGEN PREMIO */
+.prize-img{
+    margin-top:25px;
+    text-align:center;
+}
+.prize-img img{
+    max-width:100%;
+    border-radius:18px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+/* FOOTER */
+.footer{
+    margin-top:18px;
+    text-align:center;
+    font-size:9px;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="header">
+        <span class="tag">🔥 Incentivo activo</span>
+        <h1>Activaciones HBO</h1>
+    </div>
+
+    <!-- TIMER -->
+    <div class="timer">
+        <div class="timer-title">⏳ FINALIZA EN</div>
+        <div class="progress">
+            <div id="bar" class="progress-bar"></div>
+        </div>
+        <div class="countdown">
+            <div class="count"><span id="d">00</span><span>Días</span></div>
+            <div class="count"><span id="h">00</span><span>Horas</span></div>
+            <div class="count"><span id="m">00</span><span>Min</span></div>
+        </div>
+    </div>
+
+    <!-- INCENTIVO -->
+    <div class="card">
+        <h2>🎯 Incentivo vigente – Enero</h2>
+        <p>📍 Zonas: <span class="highlight">Central y Asunción</span></p>
+        <p>🎟️ Modalidad: <span class="highlight">Sorteo por cupones</span></p>
+        <p>🏆 Premio: <b>Smartphone USD 450</b> por zona</p>
+    </div>
+
+    <!-- BOTÓN -->
+    <a href="paso-a-paso.html" class="btn">
+        📲 Ver paso a paso de activación HBO
+    </a>
+
+    <!-- BASES -->
+    <div class="bases">
+        <h3>📜 Mecánica del sorteo</h3>
+        <ul>
+            <li><b>Método de participación:</b> 1 cupón por activación válida</li>
+            <li><b>Mínimo para concursar:</b> 2 activaciones</li>
+            <li><b>Días tácticos:</b> duplicación de cupones</li>
+            <li><b>Sorteo:</b> al cierre del período (2 al 31 de enero)</li>
+        </ul>
+
+        <h3>⚠️ Condiciones</h3>
+        <ul>
+            <li>Bajas o cancelaciones dentro de 60 días serán <span class="anr">ANR</span></li>
+            <li>Sujeto a cumplimiento de la zona</li>
+        </ul>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="prize-img">
+        <img src="./celular-asesor.jpg" alt="Premio Smartphone">
+    </div>
+
+    <div class="footer">© 2026 – Uso interno</div>
+</div>
+
+<script>
+function updateTimer(){
+    const start = new Date("January 2, 2026 00:00:00").getTime();
+    const end   = new Date("January 31, 2026 23:59:59").getTime();
+    const now   = new Date().getTime();
+
+    const total = end - start;
+    const elapsed = now - start;
+    const remaining = end - now;
+
+    if (remaining > 0) {
+        const progress = Math.min((elapsed / total) * 100, 100);
+        const bar = document.getElementById("bar");
+        bar.style.width = progress + "%";
+
+        let color;
+        if (progress < 40) color = "#059669";
+        else if (progress < 65) color = "#fbbf24";
+        else if (progress < 85) color = "#f97316";
+        else color = "#ef4444";
+
+        bar.style.backgroundColor = color;
+
+        const d = Math.floor(remaining / (1000*60*60*24));
+        const h = Math.floor((remaining % (1000*60*60*24)) / (1000*60*60));
+        const m = Math.floor((remaining % (1000*60*60)) / (1000*60));
+
+        dEl.textContent = d.toString().padStart(2,"0");
+        hEl.textContent = h.toString().padStart(2,"0");
+        mEl.textContent = m.toString().padStart(2,"0");
+    }
+}
+
+const dEl = document.getElementById("d");
+const hEl = document.getElementById("h");
+const mEl = document.getElementById("m");
+
+updateTimer();
+setInterval(updateTimer,60000);
+</script>
+
+</body>
+</html>
